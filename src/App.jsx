@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar.jsx';
 import ContentMenuPelis from './components/ContentMenuPelis.jsx';
 import {Box , Stack} from "@mui/material";
 import PageContPeli from './PageContPeli.jsx';
+import PageContSala from './PageContSala.jsx';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Header/>
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar/>
-          <PageContPeli/>
+          <PageContSala/>
         </Stack>
       </Box>
     

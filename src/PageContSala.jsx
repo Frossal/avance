@@ -1,303 +1,282 @@
 import React, { useState } from 'react';
-import { Container, Box, Button, TextField } from '@mui/material';
-import PlaceIcon from '@mui/icons-material/Place';
+import { Container, Box, Button, TextField, Divider, Stack, Grid, Card, Paper,Avatar } from '@mui/material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
-
-
 const PageContSala = () => {
 
-  const [searchTerm, setSearchTerm] = useState('');
-
   return (
-   
-   
-   
-    <Box>
-
-        <div style={{ backgroundColor: "#F1690B", display: 'flex', alignItems: 'center', width: '105%', height: '90px', marginTop: '-21px', marginLeft: '-10px' }}>
-        <h1 style={{ color: "#FFFFFF", marginLeft: '50px', paddingTop: '10px' }}> &#9776;</h1>
-        <h1 style={{ color: "#FFFFFF", padding: '10px', marginLeft: '50px', paddingTop: '20px' }}>Salas de cine ULima </h1>
-        <h1 style={{ color: "#FFFFFF", padding: '10px', marginLeft: '800px', paddingTop: '20px' }}>&#9733;</h1>
-        <h1 style={{ color: "#FFFFFF", padding: '20px', marginTop: '30px' }}>&#9733;</h1>
-        <h1 style={{ color: "#FFFFFF", padding: '20px', marginTop: '30px' }}>&#9733;</h1>
-        <h1 style={{ color: "#FFFFFF", padding: '20px', marginTop: '30px' }}>&#9733;</h1>
-        <h1 style={{ color: "#FFFFFF", padding: '20px', marginTop: '30px' }}>&#9733;</h1>
-      </div>
-      
-      <Box style={{ display: 'flex' }} >
-      <Container style={{ display: 'inline'  }}>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Universidad_de_Lima_logo.png/230px-Universidad_de_Lima_logo.png"  style={{ maxWidth: '100%', height: '180px', marginTop:'50px', marginLeft:'50px' }} />
-          <div >
-          <TextField  style={{ marginTop: '50px', width: '300px', height: '90px', marginLeft:'30px' }}
-            label="Buscar"
-            variant="outlined"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-
-          <div tyle={{ display: 'flex'}}> 
-
-          <h1 style={{ color:"Black", padding: '20px', marginTop: '0px', fontSize:'25px', marginLeft:'25px',   }}>&#9733; &nbsp; Peliculas</h1>
-         
-
-          <h1 style={{  color:"Black",  padding: '20px', marginTop: '20px', fontSize:'25px', marginLeft:'25px'  }}>&#9733; &nbsp; Series</h1>
-
-
-          </div>
-
-          </div>
-
-
-        </Container>
-
-      <Container style={{ display: 'inline', margin: '10px'}}>
-
-        <div>
-        <h1 style={{fontSize:'45px',marginLeft:'-400px', marginTop:'50px', marginBottom:'-7px'}}>Salas</h1>
-        <hr style={{ width: '300%', border: '1px solid #ccc', marginLeft:'-400px' }} />
-        </div>
-
-        <div>
-      <h1 style={{ fontSize: '45px', marginLeft: '-350px', marginTop: '50px', marginBottom: '-7px', fontWeight: '400' }}>
-        SALA A
-      </h1>
-      <div style={{ display: 'flex', alignItems: 'baseline' }}>
-        <PlaceIcon style={{ marginTop: '50px', marginBottom: '-7px',  fontWeight: '400', marginLeft: '-350px' }} />
-        <span style={{ marginLeft: '10px', marginTop: '50px', marginBottom: '-7px', color: '#0A90ED', fontWeight: '500', fontSize:'20px' }}>Pabellon A-ULima</span>
-      </div>
-    </div>
-    <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-  <div>
-    <img
-      src="https://www.ulima.edu.pe/sites/default/files/styles/600x300/public/news/img/dji_0017-edit_0.jpg?itok=opUlF2Fs"
-      style={{ maxWidth: '200%', height: '100%', marginTop: '50px', marginLeft: '-350px' }}
-    />
-  </div>
-  <div style={{ marginLeft: '20px', maxWidth: '400px', overflow: 'hidden', border: '2px solid #ddd', borderRadius: '8px', padding: '20px', marginTop: '20px' }}>
-    <h1>
-      Historia
-    </h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
     
-  </div>
-  </div>
+       <Box  flex={7} sx={{ p: 4  }} >
+            <Typography  variant="h4" component="div" style={{ paddingTop: '16px', paddingBottom: '16px' , borderBottom: '1px solid rgb(224, 224, 224)',fontFamily:"Roboto"}}>
+                Salas
+            </Typography>
+
+        <Box  sx={{ mt: 4, padding: '0px 24px 0 24px', mr: 2, width:"95%", mt:5, backgroundColor:"pink"}}>
+         <Container >
+          <header>
+            <Box >
+            <Typography variant="h4" sstyle={{ fontSize: "40px", fontFamily: "Roboto"}}  >Sala A</Typography>
+
+            <Grid style={{display:"flex"}}>
+              <LocationOnIcon color="action" style={{ marginRight: "15px",marginBottom:"20px", marginTop:"10px" }} ></LocationOnIcon>
+              <Typography  variant="subtitle2" color="#2196F3" fontWeight="600" style={{marginBottom:"20px", marginTop:"10px" ,fontFamily:"Roboto"}}>
+              Pabellon A- ULima
+              </Typography>
+            </Grid>
+            </Box>
+          </header>
+         </Container>
 
 
-  <div>
-  <h1 style={{ fontSize: '45px', marginLeft: '-350px', marginTop: '50px', marginBottom: '-7px', fontWeight: '400' }}>Peliculas Disponibles</h1>
+         <Grid display={"flex"} style={{width:"100%", height:"340px"}}   >
+          <Card sx={{marginRight:"6%"}} style={{width:"700px", height:"340px"}}> 
+            
+            <img
+      src="https://www.ulima.edu.pe/sites/default/files/styles/600x300/public/news/gallery/pabellon_f1_y_f2_terraza_primer_pisot.jpg?itok=rWDxDSXS"
+      style={{width:"700px",height:"100%"  }}/>
+           
+            </Card>
 
-  <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-    <Box
-      sx={{
-        width: '100px',
-        height: '50px',
-        border: '2px solid #ddd',
-        borderRadius: '8px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f0f0f0',
-        marginRight: '20px', 
-        marginLeft: '-330px',
-        marginTop: '100px',
-       
-      }}
-    >
-      <Typography variant="h5">BS</Typography>
-    </Box>
+            <Card style={{width:"320px", height:"530px"}}>
+              
+              <header >
+                <Typography variant='h5' style={{margin:"10%", fontFamily:"Roboto"}} > Historia</Typography>
+                </header>
 
-    <div style={{ display: 'block', marginLeft: '20px', marginTop: '80px',}}>
-      <h1 style={{ fontSize:'30px',marginTop:'30px',marginLeft: '-20px'}}> Beekeeper Sentencia de Muerte</h1>
+                <Typography variant='body1' style={{margin:"5%", fontSize:"16px", fontFamily:"Roboto"}}>
+                La Facultad de Comunicación tiene tres estudios, los cuales son sets profesionales que se utilizan para televisión, streaming y diversas realizaciones audiovisuales. Cada uno de ellos está equipado con tres cámaras de video digitales full HD, switcher digital, pantallas de monitoreo tanto en Control y Estudio, dos tituladores y grabadoras/reproductoras de video. El sonido comprende: consola de audio, micrófonos de mano, de pecho, boom y de vincha. El sistema de iluminación trabaja con control de iluminación, luces alógenas de varios tipos: Fresnel, Scoop, Broad, Cañón, además del rack de control técnico con instrumentos de medición.
 
-      <p style={{ fontSize: '20px', marginLeft: '-100px', marginTop: '30px', marginRight: '550px' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      </p>
+                </Typography>
+              
+                
+            </Card>
+         
+          </Grid>
 
-      <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-        <Box
-          sx={{
-            marginTop:'40px',
-            marginLeft:'-110px',
-            width: '100px',
-            height: '50px',
-            border: '2px dashed purple',
-            borderRadius: '8px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#BB62FD',
-          }}
-        >
-          <Typography variant="h5" style={{ fontSize:'20px' }}>15:00</Typography>
-        </Box>
-        <Box
-
-          sx={{
-            marginTop:'40px',
-            width: '100px',
-            height: '50px',
-            border: '2px dashed purple',
-            borderRadius: '8px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#BB62FD',
-            marginLeft: '20px',
-          }}
-        >
-          <Typography variant="h5" style={{ fontSize:'20px' }}>17:00</Typography>
-        </Box>
-      </div>
-    </div>
-  </div>
-
-
-  <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-    <Box
-      sx={{
-        width: '100px',
-        height: '50px',
-        border: '2px solid #ddd',
-        borderRadius: '8px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f0f0f0',
-        marginRight: '20px', 
-        marginLeft: '-330px',
-        marginTop: '100px',
-       
-      }}
-    >
-      <Typography variant="h5">NG</Typography>
-    </Box>
-
-    <div style={{ display: 'block', marginLeft: '20px', marginTop: '80px',}}>
-      <h1 style={{ fontSize:'30px',marginTop:'30px',marginLeft: '-20px'}}> El Niño y la Garza</h1>
-
-      <p style={{ fontSize: '20px', marginLeft: '-100px', marginTop: '30px', marginRight: '550px' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      </p>
-
-      <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-        <Box
-          sx={{
-            marginTop:'40px',
-            marginLeft:'-110px',
-            width: '100px',
-            height: '50px',
-            border: '2px dashed purple',
-            borderRadius: '8px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#BB62FD',
-          }}
-        >
-          <Typography variant="h5" style={{ fontSize:'20px' }}>17:00</Typography>
-        </Box>
-        <Box
-
-          sx={{
-            marginTop:'40px',
-            width: '100px',
-            height: '50px',
-            border: '2px dashed purple',
-            borderRadius: '8px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#BB62FD',
-            marginLeft: '20px',
-          }}
-        >
-          <Typography variant="h5" style={{ fontSize:'20px' }}>18:00</Typography>
-        </Box>
-      </div>
-    </div>
-  </div>
-
-  <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-    <Box
-      sx={{
-        width: '100px',
-        height: '50px',
-        border: '2px solid #ddd',
-        borderRadius: '8px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f0f0f0',
-        marginRight: '20px', 
-        marginLeft: '-330px',
-        marginTop: '100px',
-       
-      }}
-    >
-      <Typography variant="h5">JC</Typography>
-    </Box>
-
-    <div style={{ display: 'block', marginLeft: '20px', marginTop: '80px',}}>
-      <h1 style={{ fontSize:'30px',marginTop:'30px',marginLeft: '-20px'}}> Jack en la caja Maldita</h1>
-
-      <p style={{ fontSize: '20px', marginLeft: '-100px', marginTop: '30px', marginRight: '550px' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      </p>
-
-      <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-        <Box
-          sx={{
-            marginTop:'40px',
-            marginLeft:'-110px',
-            width: '100px',
-            height: '50px',
-            border: '2px dashed purple',
-            borderRadius: '8px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#BB62FD',
-          }}
-        >
-          <Typography variant="h5" style={{ fontSize:'20px' }}>20:00</Typography>
-        </Box>
-        <Box
-
-          sx={{
-            marginTop:'40px',
-            width: '100px',
-            height: '50px',
-            border: '2px dashed purple',
-            borderRadius: '8px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#BB62FD',
-            marginLeft: '20px',
-          }}
-        >
-          <Typography variant="h5" style={{ fontSize:'20px' }}>22:00</Typography>
-        </Box>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+          <Grid style={{ paddingTop:"2%",width:"100%", height:"58px", paddingBottom:"3%" }}>
+          <Typography variant="h2" style={{ fontSize: "45px", fontFamily: "Roboto" }}>
+          Peliculas disponibles
+        </Typography>
+          </Grid>
 
       
 
-
-
-      </Container>
-      
-      
-    </Box>
-    </Box>
+          <Box sx={{ mt:10, width:"30%", height:"1057px" }} >
+           <Grid style={{marginBottom:"18%"}}>
+             <Grid> 
+             <Container  style={{width:"520px", height:"96px"}}>
+               <Container style={{display:"flex", marginBottom:"16px"}}>
+                 <Avatar  variant='square' >
+               <Typography  >
+                 BS
+               </Typography>
  
+                 </Avatar>
+                 <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px",fontFamily: "Roboto"}}>
+                 Beekeeper Sentencia de Muerte
+               </Typography>
+               </Container>
+               
+               <Typography  variant='body1' style={{marginLeft:"5%",fontFamily: "Roboto"}}>
+               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+               </Typography>
+               </Container>
+
+               <Grid sx={{display:"flex"}}>
+               <Box
+
+          sx={{
+            marginTop:'40px',
+            width: '80px',
+            height: '28px',
+            border: '1px dashed #9747FF',
+            borderRadius: '8px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(151, 71, 255, 0.04)',
+            marginLeft: '20px',
+            padding: "4px, 24px, 4px, 24px"
+            
+          }}
+        >
+          <Typography variant="h5" style={{ fontSize:'12px', color:"rgba(151, 71, 255, 1)" }}>15:00</Typography>
+        </Box>
+
+        <Box
+
+          sx={{
+            marginTop:'40px',
+            width: '80px',
+            height: '28px',
+            border: '1px dashed #9747FF',
+            borderRadius: '8px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(151, 71, 255, 0.04)',
+            marginLeft: '20px',
+            padding: "4px, 24px, 4px, 24px"
+          }}
+        >
+          <Typography variant="h5" style={{ fontSize:'12px', color:"rgba(151, 71, 255, 1)" }}>17:00</Typography>
+        </Box>
+                
+               </Grid>
+ 
+              
+ 
+             </Grid>
+ 
+           </Grid>
+
+           <Grid style={{marginBottom:"18%"}}>
+             <Grid> 
+             <Container  style={{width:"520px", height:"96px"}}>
+               <Container style={{display:"flex", marginBottom:"16px"}}>
+                 <Avatar  variant='square' >
+               <Typography >
+                 NG
+               </Typography>
+ 
+                 </Avatar>
+                 <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px", fontFamily: "Roboto"}}>
+                 El Niño y la Garza
+               </Typography>
+               </Container>
+               
+               <Typography  variant='body1' style={{marginLeft:"5%",fontFamily: "Roboto"}}>
+               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+               </Typography>
+               </Container>
+
+               <Grid sx={{display:"flex"}}>
+               <Box
+
+          sx={{
+            marginTop:'40px',
+            width: '80px',
+            height: '28px',
+            border: '1px dashed #9747FF',
+            borderRadius: '8px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(151, 71, 255, 0.04)',
+            marginLeft: '20px',
+            padding: "4px, 24px, 4px, 24px"
+            
+          }}
+        >
+          <Typography variant="h5" style={{ fontSize:'12px', color:"rgba(151, 71, 255, 1)" }}>17:00</Typography>
+        </Box>
+
+        <Box
+
+          sx={{
+            marginTop:'40px',
+            width: '80px',
+            height: '28px',
+            border: '1px dashed #9747FF',
+            borderRadius: '8px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(151, 71, 255, 0.04)',
+            marginLeft: '20px',
+            padding: "4px, 24px, 4px, 24px"
+          }}
+        >
+          <Typography variant="h5" style={{ fontSize:'12px', color:"rgba(151, 71, 255, 1)" }}>18:00</Typography>
+        </Box>
+                
+               </Grid>
+ 
+              
+ 
+             </Grid>
+ 
+           </Grid>
+
+           <Grid style={{marginBottom:"18%"}}>
+             <Grid> 
+             <Container  style={{width:"520px", height:"96px"}}>
+               <Container style={{display:"flex", marginBottom:"16px"}}>
+                 <Avatar  variant='square' >
+               <Typography >
+                 JC
+               </Typography>
+ 
+                 </Avatar>
+                 <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px",fontFamily: "Roboto"}}>
+                 Jack en la caja maldita 3
+               </Typography>
+               </Container>
+               
+               <Typography  variant='body1' style={{marginLeft:"5%",fontFamily: "Roboto"}}>
+               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+               </Typography>
+               </Container>
+
+               <Grid sx={{display:"flex"}}>
+               <Box
+
+          sx={{
+            marginTop:'40px',
+            width: '80px',
+            height: '28px',
+            border: '1px dashed #9747FF',
+            borderRadius: '8px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(151, 71, 255, 0.04)',
+            marginLeft: '20px',
+            padding: "4px, 24px, 4px, 24px"
+            
+          }}
+        >
+          <Typography variant="h5" style={{ fontSize:'12px', color:"rgba(151, 71, 255, 1)" }}>20:00</Typography>
+        </Box>
+
+        <Box
+
+          sx={{
+            marginTop:'40px',
+            width: '80px',
+            height: '28px',
+            border: '1px dashed #9747FF',
+            borderRadius: '8px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(151, 71, 255, 0.04)',
+            marginLeft: '20px',
+            padding: "4px, 24px, 4px, 24px"
+          }}
+        >
+          <Typography variant="h5" style={{ fontSize:'12px', color:"rgba(151, 71, 255, 1)" }}>22:00</Typography>
+        </Box>
+                
+               </Grid>
+ 
+              
+ 
+             </Grid>
+ 
+           </Grid>
+ 
+ 
+ 
+ 
+          </Box>
+          </Box >
+
+</Box>
+
+
+      
   );
 };
 
