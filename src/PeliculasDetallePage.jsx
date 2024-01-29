@@ -3,27 +3,30 @@ import { Container, Box, Button, TextField, Divider, Stack, Grid, Card, Paper,Av
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
-const PageContSala = () => {
+const PeliculasDetallePage = () => {
 
   return (
     
        <Box  flex={7} sx={{ p: 4  }} >
             <Typography  variant="h4" component="div" style={{ paddingTop: '16px', paddingBottom: '16px' , borderBottom: '1px solid rgb(224, 224, 224)'}}>
-                Salas
+                Películas
             </Typography>
 
         <Box  sx={{ mt: 4, padding: '0px 24px 0 24px', mr: 2, width:"95%", height:"1057px", mt:5 }}>
          <Container >
           <header>
             <Box >
-            <Typography variant="h4" sstyle={{ fontSize: "40px", fontFamily: "Roboto"}}  >Sala A</Typography>
+            <Typography variant="h4" sstyle={{ fontSize: "40px", fontFamily: "Roboto"}}  >Beekeeper Sentencia de Muerte</Typography>
 
             <Grid style={{display:"flex"}}>
               <LocationOnIcon color="action" style={{ marginRight: "15px",marginBottom:"20px", marginTop:"10px" }} ></LocationOnIcon>
               <Typography  variant="subtitle2" color="#2196F3" fontWeight="600" style={{marginBottom:"20px", marginTop:"10px"}}>
-               Pabellon A-ULima
+               1hrs 50min
               </Typography>
-                
+                <LocationOnIcon color='action' style={{marginLeft:"15px", marginRight: "15px", marginBottom:"20px", marginTop:"10px" }} ></LocationOnIcon>
+                <Typography  variant="subtitle2" color="#2196F3" fontWeight="600" style={{marginBottom:"20px", marginTop:"10px",fontFamily: "Roboto"}}>
+                 Director
+                </Typography>
             </Grid>
             </Box>
           </header>
@@ -34,20 +37,24 @@ const PageContSala = () => {
           <Card sx={{marginRight:"6%"}} style={{width:"700px", height:"340px"}}> 
             
             <img
-      src="https://www.ulima.edu.pe/sites/default/files/styles/600x300/public/news/gallery/pabellon_f1_y_f2_terraza_primer_pisot.jpg?itok=rWDxDSXS"
+      src="https://i.ytimg.com/vi/J2pWkhP3ou0/maxresdefault.jpg"
       style={{width:"700px",height:"100%"  }}/>
            
             </Card>
 
-            <Card style={{width:"320px", height:"530px"}}>
+            <Card style={{width:"320px", height:"340px"}}>
               
               <header >
-                <Typography variant='h5' style={{margin:"6%"}} > Historia</Typography>
+                <Typography variant='h5' style={{margin:"10%"}} > Sinopsis</Typography>
                 </header>
 
                 <Typography variant='body1' style={{margin:"8%", paddingRight:"0px", fontSize:"16px",fontFamily: "Roboto"}}>
-                La Facultad de Comunicación tiene tres estudios, los cuales son sets profesionales que se utilizan para televisión, streaming y diversas realizaciones audiovisuales. Cada uno de ellos está equipado con tres cámaras de video digitales full HD, switcher digital, pantallas de monitoreo tanto en Control y Estudio, dos tituladores y grabadoras/reproductoras de video. El sonido comprende: consola de audio, micrófonos de mano, de pecho, boom y de vincha. El sistema de iluminación trabaja con control de iluminación, luces alógenas de varios tipos: Fresnel, Scoop, Broad, Cañón, además del rack de control técnico con instrumentos de medición.                </Typography>
-                
+                La brutal campaña de venganza de un hombre adquiere dimensiones nacionales cuando se descubre que es un antiguo agente de una poderosa organización clandestina conocida como "Los apicultores".
+                </Typography>
+                <Box  sx={{mt:'16px',display: 'flex', gap: '8px', margin:"5%" }} spacing={8}>
+                <Chip label="Accion" variant="filled" color="default" style={{ padding: "4px" , borderRadius: "100px"}} />
+                <Chip label="+14" variant="filled" color="default" style={{ padding: "4px", borderRadius: "100px" }} />
+                 </Box>
                 
             </Card>
          
@@ -55,7 +62,7 @@ const PageContSala = () => {
 
           <Grid style={{ paddingTop:"2%",width:"100%", height:"58px", paddingBottom:"3%" }}>
           <Typography variant="h2" style={{ fontSize: "45px", fontFamily: "Roboto" }}>
-         Peliculas Disponibles
+          Salas disponibles
         </Typography>
           </Grid>
 
@@ -68,12 +75,12 @@ const PageContSala = () => {
                <Container style={{display:"flex", marginBottom:"16px"}}>
                  <Avatar  variant='square' >
                <Typography >
-                 BS
+                 S1
                </Typography>
  
                  </Avatar>
                  <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px",fontFamily: "Roboto"}}>
-                 Beekeeper Sentencia de Muerte
+                 Sala A
                </Typography>
                </Container>
                
@@ -136,12 +143,12 @@ const PageContSala = () => {
                <Container style={{display:"flex", marginBottom:"16px"}}>
                  <Avatar  variant='square' >
                <Typography >
-                 NG
+                 S2
                </Typography>
  
                  </Avatar>
                  <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px",fontFamily: "Roboto"}}>
-                 El niño y la Garza
+                 Sala B
                </Typography>
                </Container>
                
@@ -204,12 +211,12 @@ const PageContSala = () => {
                <Container style={{display:"flex", marginBottom:"16px"}}>
                  <Avatar  variant='square' >
                <Typography >
-                 JC
+                 S3
                </Typography>
  
                  </Avatar>
-                 <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px",fontFamily: "Roboto"}}>
-                 Jack en la caja Maldita 3
+                 <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px",}}>
+                 Sala C
                </Typography>
                </Container>
                
@@ -279,5 +286,4 @@ const PageContSala = () => {
   );
 };
 
-
-export default PageContSala;
+export default PeliculasDetallePage;

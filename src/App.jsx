@@ -2,8 +2,8 @@ import Header from './components/Header.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import ContentMenuPelis from './components/ContentMenuPelis.jsx';
 import {Box , Stack} from "@mui/material";
-import PageContPeli from './PageContPeli.jsx';
-import PageContSala from './PageContSala.jsx';
+import PeliculasDetallePage from './PeliculasDetallePage.jsx';
+import SalaItemPage from './SalaItemPage.jsx';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Header/>
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar/>
-          <PageContSala/>
+          <SalaItemPage/>
         </Stack>
       </Box>
     
