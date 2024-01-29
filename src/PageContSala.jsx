@@ -8,11 +8,11 @@ const PageContSala = () => {
   return (
     
        <Box  flex={7} sx={{ p: 4  }} >
-            <Typography  variant="h4" component="div" style={{ paddingTop: '16px', paddingBottom: '16px' , borderBottom: '1px solid rgb(224, 224, 224)',fontFamily:"Roboto"}}>
+            <Typography  variant="h4" component="div" style={{ paddingTop: '16px', paddingBottom: '16px' , borderBottom: '1px solid rgb(224, 224, 224)'}}>
                 Salas
             </Typography>
 
-        <Box  sx={{ mt: 4, padding: '0px 24px 0 24px', mr: 2, width:"95%", mt:5, backgroundColor:"pink"}}>
+        <Box  sx={{ mt: 4, padding: '0px 24px 0 24px', mr: 2, width:"95%", height:"1057px", mt:5 }}>
          <Container >
           <header>
             <Box >
@@ -20,9 +20,10 @@ const PageContSala = () => {
 
             <Grid style={{display:"flex"}}>
               <LocationOnIcon color="action" style={{ marginRight: "15px",marginBottom:"20px", marginTop:"10px" }} ></LocationOnIcon>
-              <Typography  variant="subtitle2" color="#2196F3" fontWeight="600" style={{marginBottom:"20px", marginTop:"10px" ,fontFamily:"Roboto"}}>
-              Pabellon A- ULima
+              <Typography  variant="subtitle2" color="#2196F3" fontWeight="600" style={{marginBottom:"20px", marginTop:"10px"}}>
+               Pabellon A-ULima
               </Typography>
+                
             </Grid>
             </Box>
           </header>
@@ -41,14 +42,12 @@ const PageContSala = () => {
             <Card style={{width:"320px", height:"530px"}}>
               
               <header >
-                <Typography variant='h5' style={{margin:"10%", fontFamily:"Roboto"}} > Historia</Typography>
+                <Typography variant='h5' style={{margin:"6%"}} > Historia</Typography>
                 </header>
 
-                <Typography variant='body1' style={{margin:"5%", fontSize:"16px", fontFamily:"Roboto"}}>
-                La Facultad de Comunicación tiene tres estudios, los cuales son sets profesionales que se utilizan para televisión, streaming y diversas realizaciones audiovisuales. Cada uno de ellos está equipado con tres cámaras de video digitales full HD, switcher digital, pantallas de monitoreo tanto en Control y Estudio, dos tituladores y grabadoras/reproductoras de video. El sonido comprende: consola de audio, micrófonos de mano, de pecho, boom y de vincha. El sistema de iluminación trabaja con control de iluminación, luces alógenas de varios tipos: Fresnel, Scoop, Broad, Cañón, además del rack de control técnico con instrumentos de medición.
-
-                </Typography>
-              
+                <Typography variant='body1' style={{margin:"8%", paddingRight:"0px", fontSize:"16px",fontFamily: "Roboto"}}>
+                La Facultad de Comunicación tiene tres estudios, los cuales son sets profesionales que se utilizan para televisión, streaming y diversas realizaciones audiovisuales. Cada uno de ellos está equipado con tres cámaras de video digitales full HD, switcher digital, pantallas de monitoreo tanto en Control y Estudio, dos tituladores y grabadoras/reproductoras de video. El sonido comprende: consola de audio, micrófonos de mano, de pecho, boom y de vincha. El sistema de iluminación trabaja con control de iluminación, luces alógenas de varios tipos: Fresnel, Scoop, Broad, Cañón, además del rack de control técnico con instrumentos de medición.                </Typography>
+                
                 
             </Card>
          
@@ -56,7 +55,7 @@ const PageContSala = () => {
 
           <Grid style={{ paddingTop:"2%",width:"100%", height:"58px", paddingBottom:"3%" }}>
           <Typography variant="h2" style={{ fontSize: "45px", fontFamily: "Roboto" }}>
-          Peliculas disponibles
+         Peliculas Disponibles
         </Typography>
           </Grid>
 
@@ -68,7 +67,7 @@ const PageContSala = () => {
              <Container  style={{width:"520px", height:"96px"}}>
                <Container style={{display:"flex", marginBottom:"16px"}}>
                  <Avatar  variant='square' >
-               <Typography  >
+               <Typography >
                  BS
                </Typography>
  
@@ -141,8 +140,8 @@ const PageContSala = () => {
                </Typography>
  
                  </Avatar>
-                 <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px", fontFamily: "Roboto"}}>
-                 El Niño y la Garza
+                 <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px",fontFamily: "Roboto"}}>
+                 El niño y la Garza
                </Typography>
                </Container>
                
@@ -210,7 +209,7 @@ const PageContSala = () => {
  
                  </Avatar>
                  <Typography  variant='h6' style={{marginLeft:"2%", marginTop:"5px",fontFamily: "Roboto"}}>
-                 Jack en la caja maldita 3
+                 Jack en la caja Maldita 3
                </Typography>
                </Container>
                
@@ -279,5 +278,6 @@ const PageContSala = () => {
       
   );
 };
+
 
 export default PageContSala;
